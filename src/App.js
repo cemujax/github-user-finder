@@ -1,11 +1,22 @@
 import React, { Component } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
+
+import header from "components/common/header";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">App</header>
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path="/search" component={header} />
+          <Redirect to="/search" />
+        </Switch>
+      </Router>
     );
   }
 }
