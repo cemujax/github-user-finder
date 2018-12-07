@@ -7,14 +7,14 @@ import classNames from "classnames/bind";
 
 const cx = classNames.bind(styles);
 
-const Header = () => (
+const Header = ({ onSubmit, searchTerm }) => (
   <header className={cx("header")}>
     <div className={cx("header-content")}>
       <div className={cx("brand")}>
         <Logo />
       </div>
       <div className={cx("right")}>
-        <SearchForm />
+        <SearchForm onSubmit={onSubmit} initialInputValue={searchTerm} />
       </div>
     </div>
   </header>
