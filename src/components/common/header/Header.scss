@@ -1,7 +1,9 @@
 @import "utils";
 
 .header {
-  background: $oc-indigo-1;
+  background: $oc-lime-0;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+
   .header-content {
     height: 5rem;
     width: 1400px;
