@@ -1,3 +1,37 @@
+@import "utils";
+
 .header {
-  background: gray;
+  background: $oc-indigo-1;
+  .header-content {
+    height: 5rem;
+    width: 1400px;
+    margin: 0 auto;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    display: flex;
+    align-items: center;
+
+    @include media("<wide") {
+      width: 100%;
+    }
+    @include media("<medium") {
+      display: block;
+      // padding-left: 5%;
+      // padding-right: 5%;
+    }
+
+    // @include media("<medium") {
+    // }
+
+    .brand {
+      color: black;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .right {
+      margin-left: auto;
+    }
+  }
 }

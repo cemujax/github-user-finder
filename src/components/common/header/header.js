@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import SearchForm from "components/SearchForm";
+import SearchForm from "components/search/SearchForm";
+import Logo from "components/common/Logo/Logo";
 
 import styles from "./Header.scss";
 import classNames from "classnames/bind";
@@ -11,7 +11,7 @@ const Header = () => (
   <header className={cx("header")}>
     <div className={cx("header-content")}>
       <div className={cx("brand")}>
-        <Link to="/search">GitHub User Finder</Link>
+        <Logo />
       </div>
       <div className={cx("right")}>
         <SearchForm />
