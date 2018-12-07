@@ -6,14 +6,14 @@ import {
   Redirect
 } from "react-router-dom";
 
-import header from "components/common/header";
+import Header from "components/common/Header";
 
 class App extends Component {
   render() {
     return (
       <Router>
         <Switch>
-          <Route exact path="/search" component={header} />
+          <Route exact path="/search" component={Header} />
           <Redirect to="/search" />
         </Switch>
       </Router>

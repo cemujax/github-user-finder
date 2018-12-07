@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "classnames": "^2.2.6",
+    "include-media": "^1.4.9",
     "lodash": "^4.17.11",
+    "node-sass": "^4.10.0",
+    "open-color": "^1.6.3",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
@@ -12,7 +16,8 @@
     "react-scripts": "2.1.1",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
-    "redux-saga": "^0.16.2"
+    "redux-saga": "^0.16.2",
+    "sass-loader": "^7.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
