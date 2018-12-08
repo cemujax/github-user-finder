@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import HeaderContainer from "containers/HeaderContainer";
+import SearchResultContainer from "containers/SearchResultContainer";
 
 import qs from "query-string";
 import curry from "lodash/fp/curry";
@@ -27,11 +28,14 @@ class DefaultPage extends Component {
     console.log("parsedSearch", parsedSearch);
 
     return (
-      <HeaderContainer
-        searchTerm={searchTerm}
-        searchQuery={qs.stringify(parsedSearch)}
-        onSubmit={pushUrlQuery(push)}
-      />
+      <div>
+        <HeaderContainer
+          searchTerm={searchTerm}
+          searchQuery={qs.stringify(parsedSearch)}
+          onSubmit={pushUrlQuery(push)}
+        />
+        <SearchResultContainer {...match} searchTerm={searchTerm} />
+      </div>
     );
   }
 }
