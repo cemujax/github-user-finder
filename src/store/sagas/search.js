@@ -9,9 +9,8 @@ export function* searchUsers(action) {
       api.searchUsers,
       qs.parse(action.payload.search)
     );
-    const data = response.data;
 
-    yield put({ type: "SEARCH_SUCCESS", payload: data });
+    yield put({ type: "SEARCH_SUCCESS", payload: response });
   } catch (e) {
     yield put({
       type: "SEARCH_FAILURE",

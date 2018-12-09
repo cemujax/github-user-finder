@@ -6,21 +6,25 @@ import UserInfo from "components/user/UserInfo";
 
 import styles from "components/user/UserInfo/UserInfo.scss";
 import classNames from "classnames/bind";
+import Pagination from "components/common/Pagination/Pagination";
+
 const cx = classNames.bind(styles);
 
 class SearchResultContainer extends Component {
   static defaultProps = {
     totalCount: 0,
-    items: []
+    items: [],
+    pagination: {}
   };
 
   static propTypes = {
     totalCount: PropTypes.number,
-    items: PropTypes.array
+    items: PropTypes.array,
+    pagination: PropTypes.object
   };
 
   render() {
-    const { totalCount, items, isPending, searchTerm } = this.props;
+    const { totalCount, items, isPending, searchTerm, pagination } = this.props;
 
     if (!searchTerm) return null;
 
@@ -39,17 +43,19 @@ class SearchResultContainer extends Component {
             ))}
           </ul>
         </div>
+        <Pagination {...pagination} />
       </div>
     );
   }
 }
 
 function mapStateToProps(state) {
-  const { total_count, items, isPending } = state.search;
+  const { total_count, items, isPending, pagination } = state.search;
   return {
     totalCount: total_count,
     items: items,
-    isPending: isPending
+    isPending: isPending,
+    pagination: pagination
   };
 }
 export default connect(mapStateToProps)(SearchResultContainer);

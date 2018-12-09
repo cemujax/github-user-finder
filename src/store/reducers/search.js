@@ -2,7 +2,8 @@ const initialState = {
   items: [],
   total_count: 0,
   isPending: true,
-  error: null
+  error: null,
+  pagination: null
 };
 
 function searchReducer(state = initialState, action) {

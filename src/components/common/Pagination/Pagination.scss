@@ -1,0 +1,16 @@
+@import "utils";
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  .link {
+    font-size: 20px;
+    border-radius: 0.25rem;
+    border: 1px solid #dee2e6;
+    padding: 0.5rem 0.75rem;
+    margin: 1%;
+  }
+  .link:hover {
+    color: aquamarine;
+  }
+}
