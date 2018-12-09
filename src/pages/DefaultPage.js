@@ -5,6 +5,7 @@ import SearchResultContainer from "containers/SearchResultContainer";
 import qs from "query-string";
 import curry from "lodash/fp/curry";
 import { PER_PAGE } from "store/api";
+import Footer from "components/common/Footer";
 
 export const pushUrlQuery = curry((push, query) => {
   push({
@@ -35,6 +36,7 @@ class DefaultPage extends Component {
           onSubmit={pushUrlQuery(push)}
         />
         <SearchResultContainer {...match} searchTerm={searchTerm} />
+        <Footer />
       </div>
     );
   }
