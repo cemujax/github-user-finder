@@ -1,1 +1,31 @@
+@import "utils";
 
+.user-list {
+  margin: 0 auto;
+  max-width: 1200px;
+
+  .user-ul {
+    margin: 0;
+    list-style: none;
+    @include media(">medium") {
+      padding-left: 8%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @include media("<medium") {
+      padding-left: 40%;
+    }
+  }
+  .user-li {
+    margin-bottom: 10px;
+    flex-basis: calc(100% / 3);
+  }
+  .avatar {
+    display: inline;
+  }
+  .user-name {
+    display: inline;
+    font-size: 1.2rem;
+    margin-left: 10px;
+  }
+}

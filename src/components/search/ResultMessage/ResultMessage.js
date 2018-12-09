@@ -6,10 +6,10 @@ import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
 const ResultMessage = ({ searchTerm, totalCount }) => (
-  <div>
-    <p>
-      Result: <b>{totalCount}</b>
-      (Search For <b>{searchTerm}</b>)
+  <div className={cx("result")}>
+    <p className={cx("message")}>
+      <mark> Result: {totalCount}</mark>
+      (Search For <strong>{searchTerm}</strong>)
     </p>
   </div>
 );
