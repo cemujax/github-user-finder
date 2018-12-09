@@ -6,7 +6,7 @@ const Logo = () => {
   return (
     <React.Fragment>
       <GitHubLogo width={24} height={24} />
-      <Link to="/search">GitHub User Finder</Link>
+      <Link to="/">GitHub User Finder</Link>
     </React.Fragment>
   );
 };

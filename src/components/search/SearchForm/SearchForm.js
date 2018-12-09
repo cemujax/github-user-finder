@@ -10,13 +10,23 @@ class SearchForm extends Component {
   state = {
     inputValue: ""
   };
-
+  static defaultProps = {
+    initialInputValue: ""
+  };
   constructor(props) {
     super(props);
     this.state = {
       inputValue: this.props.initialInputValue
     };
   }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.initialInputValue !== prevState.initialInputValue) {
+      return { initialInputValue: nextProps.initialInputValue };
+    }
+    return null;
+  }
+
   handleInputChange = e => {
     this.setState({
       inputValue: e.target.value
