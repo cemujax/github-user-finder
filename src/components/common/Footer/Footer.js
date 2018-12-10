@@ -8,9 +8,8 @@ const cx = classNames.bind(styles);
 const Footer = () => (
   <footer className={cx("footer")}>
     <p>
-      Visit My GitHub
       <a href="https://github.com/cemujax" title="cemujax GitHub">
-        &nbsp;#cemujax
+        #cemujax
       </a>
     </p>
   </footer>
