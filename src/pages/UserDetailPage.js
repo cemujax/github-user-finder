@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import HeaderContainer from "containers/HeaderContainer";
-import SearchResultContainer from "containers/SearchResultContainer";
+import UserDetailContainer from "containers/UserDetailContainer";
 
 import qs from "query-string";
 import curry from "lodash/fp/curry";
@@ -14,16 +14,14 @@ export const pushUrlQuery = curry((push, query) => {
   });
 });
 
-class DefaultPage extends Component {
+class UserDetailPage extends Component {
   render() {
     const {
-      match,
       location,
       history: { push }
     } = this.props;
     const parsedSearch = qs.parse(location.search);
     const searchTerm = parsedSearch.q;
-
     return (
       <div>
         <HeaderContainer
@@ -31,11 +29,11 @@ class DefaultPage extends Component {
           searchQuery={qs.stringify(parsedSearch)}
           onSubmit={pushUrlQuery(push)}
         />
-        <SearchResultContainer {...match} searchTerm={searchTerm} />
+        <UserDetailContainer {...this.props} />
         <Footer />
       </div>
     );
   }
 }
 
-export default DefaultPage;
+export default UserDetailPage;
