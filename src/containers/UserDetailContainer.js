@@ -2,6 +2,12 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import get from "lodash/fp/get";
+import UserProfile from "components/user/UserProfile";
+
+// import styles from "./UserDetail.scss";
+// import classNames from "classnames/bind";
+
+// const cx = classNames.bind(styles);
 
 const getUserName = get("match.params.userName");
 
@@ -28,16 +34,9 @@ class UserDetailContainer extends Component {
     }
 
     return (
-      <div>
-        <h2>UserDetail</h2>
-        {userProfile.login}
-        <img
-          src={userProfile.avatar_url}
-          alt={`${userProfile.login}'s avatar`}
-          title={`${userProfile.login}'s avatar`}
-          width="120"
-        />
-      </div>
+      <React.Fragment>
+        <UserProfile userProfile={userProfile} />
+      </React.Fragment>
     );
   }
 }

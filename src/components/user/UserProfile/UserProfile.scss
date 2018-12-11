@@ -1,0 +1,63 @@
+@import "utils";
+
+.user-detail {
+  margin: 0 auto;
+  width: 1400px;
+
+  padding-top: 20px;
+  padding-left: 10%;
+  min-height: 60px;
+
+  @include media("<medium") {
+    display: block;
+  }
+
+  .user-profile {
+    display: flex;
+    margin-bottom: 5px;
+
+    @include media("<medium") {
+      display: block;
+    }
+
+    .avatar img {
+      border-radius: 0.5rem;
+      width: 230px;
+      height: 230px;
+    }
+
+    .profile-info {
+      padding-left: 2%;
+      flex-direction: column;
+
+      @include media("<medium") {
+        padding-left: 0;
+      }
+
+      .title {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        margin-bottom: 5px;
+
+        @include media("<medium") {
+          padding-top: 20px;
+        }
+
+        .user-id {
+          margin-left: 10px;
+          color: $oc-indigo-7;
+        }
+      }
+
+      .bio p {
+        font-size: 15px;
+      }
+    }
+  }
+
+  h3,
+  p {
+    margin: 0;
+  }
+}

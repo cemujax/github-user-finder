@@ -1,0 +1,15 @@
+@import "utils";
+
+.user-detail {
+  margin: 0 auto;
+  width: 1400px;
+
+  padding-top: 20px;
+  padding-left: 10%;
+  display: flex;
+  min-height: 60px;
+
+  @include media("<medium") {
+    display: block;
+  }
+}
