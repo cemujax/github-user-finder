@@ -4,11 +4,6 @@ import { connect } from "react-redux";
 import get from "lodash/fp/get";
 import UserProfile from "components/user/UserProfile";
 
-// import styles from "./UserDetail.scss";
-// import classNames from "classnames/bind";
-
-// const cx = classNames.bind(styles);
-
 const getUserName = get("match.params.userName");
 
 class UserDetailContainer extends Component {

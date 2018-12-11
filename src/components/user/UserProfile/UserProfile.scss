@@ -29,6 +29,7 @@
     .profile-info {
       padding-left: 2%;
       flex-direction: column;
+      min-height: 60px;
 
       @include media("<medium") {
         padding-left: 0;
@@ -50,8 +51,38 @@
         }
       }
 
-      .bio p {
-        font-size: 15px;
+      .bio {
+        min-height: 40px;
+        p {
+          font-size: 15px;
+        }
+      }
+
+      .stats {
+        padding-top: 1px;
+        // margin-top: auto !important;
+        .stats-itemList {
+          display: flex;
+          list-style: none;
+          padding-left: 2%;
+          margin: auto;
+
+          @include media("<medium") {
+            padding-left: 0;
+          }
+          .stats-item {
+            margin-right: 15px;
+
+            .stats-label {
+              font-size: 15px;
+            }
+
+            .stats-value {
+              font-size: 25px;
+              text-align: center;
+            }
+          }
+        }
       }
     }
   }

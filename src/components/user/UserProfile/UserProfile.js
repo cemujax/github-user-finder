@@ -16,7 +16,10 @@ class UserProfile extends Component {
       bio,
       company,
       location,
-      blog
+      blog,
+      public_repos,
+      followers,
+      following
     } = this.props.userProfile;
     return (
       <div className={cx("user-detail")}>
@@ -42,6 +45,22 @@ class UserProfile extends Component {
               location={location}
               blog={blog}
             />
+            <div className={cx("stats")}>
+              <ul className={cx("stats-itemList")}>
+                <li className={cx("stats-item")}>
+                  <p className={cx("stats-label")}>Repos</p>
+                  <p className={cx("stats-value")}>{public_repos}</p>
+                </li>
+                <li className={cx("stats-item")}>
+                  <p className={cx("stats-label")}>Followers</p>
+                  <p className={cx("stats-value")}>{followers}</p>
+                </li>
+                <li className={cx("stats-item")}>
+                  <p className={cx("stats-label")}>Follwing</p>
+                  <p className={cx("stats-value")}>{following}</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
