@@ -1,0 +1,48 @@
+@import "utils";
+
+.repositoreis {
+  margin: 0 auto;
+  width: 1400px;
+  padding-top: 10px;
+  padding-left: 10%;
+
+  .repos-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .repos {
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      .repos-title {
+        font-size: 20px;
+
+        .repos-link {
+          color: $oc-indigo-7;
+        }
+
+        .repos-fork {
+          font-size: 15px;
+          margin-left: 5px;
+        }
+      }
+
+      .repos-description {
+        font-size: 15px;
+      }
+
+      .repos-footer {
+        display: flex;
+        font-size: 12px;
+
+        .pushDate {
+          margin-left: auto;
+        }
+        p {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

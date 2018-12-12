@@ -3,18 +3,17 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import get from "lodash/fp/get";
 import UserProfile from "components/user/UserProfile";
+import Repository from "components/user/Repository";
 
 const getUserName = get("match.params.userName");
 
 class UserDetailContainer extends Component {
   static defaultProps = {
-    userProfile: {},
-    repositories: {}
+    userProfile: {}
   };
 
   static propTypes = {
     userPrfile: PropTypes.object,
-    repositories: PropTypes.array,
     searchUser: PropTypes.func
   };
 
@@ -24,7 +23,7 @@ class UserDetailContainer extends Component {
   }
 
   render() {
-    const { isPending, userProfile } = this.props;
+    const { isPending, userProfile, reposIsPending, repositories } = this.props;
 
     if (isPending) {
       return <h2>Loading</h2>;
@@ -33,6 +32,8 @@ class UserDetailContainer extends Component {
     return (
       <React.Fragment>
         <UserProfile userProfile={userProfile} />
+
+        <Repository isPending={reposIsPending} repositories={repositories} />
       </React.Fragment>
     );
   }
@@ -45,7 +46,7 @@ function mapStateToProps(state) {
   return {
     isPending: isPending,
     userProfile: userProfile,
-    repIsPending: state.repos.isPending,
+    reposIsPending: state.repos.isPending,
     repositories: repositories
   };
 }
