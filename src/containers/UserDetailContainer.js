@@ -8,11 +8,13 @@ const getUserName = get("match.params.userName");
 
 class UserDetailContainer extends Component {
   static defaultProps = {
-    userProfile: {}
+    userProfile: {},
+    repositories: {}
   };
 
   static propTypes = {
     userPrfile: PropTypes.object,
+    repositories: PropTypes.array,
     searchUser: PropTypes.func
   };
 
@@ -37,12 +39,14 @@ class UserDetailContainer extends Component {
 }
 
 function mapStateToProps(state) {
-  const { isPending, name, html_url, userProfile } = state.user;
+  const { isPending, userProfile } = state.user;
+  const { repositories } = state.repos;
+
   return {
     isPending: isPending,
-    name: name,
     userProfile: userProfile,
-    html_url: html_url
+    repIsPending: state.repos.isPending,
+    repositories: repositories
   };
 }
 

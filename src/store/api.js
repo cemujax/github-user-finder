@@ -29,5 +29,6 @@ const searchUser = userName => {
 
 export default {
   searchUsers,
-  searchUser
+  searchUser,
+  get: GITHUB_API.get
 };
