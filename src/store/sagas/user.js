@@ -9,6 +9,13 @@ function* searchAdditionalDatao(data) {
       url: data.repos_url
     }
   });
+
+  yield put({
+    type: "FOLLOWERS_REQUEST",
+    payload: {
+      url: data.followers_url
+    }
+  });
 }
 
 export function* searchUser(action) {
