@@ -1,0 +1,24 @@
+@import "utils";
+
+.followers {
+  .followers-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .follower {
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 10px;
+      padding-bottom: 20px;
+
+      .avatar {
+        display: inline;
+      }
+      .user-name {
+        display: inline;
+        font-size: 1.2rem;
+        margin-left: 10px;
+      }
+    }
+  }
+}
