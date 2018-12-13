@@ -39,6 +39,15 @@ class UserDetailContainer extends Component {
     this.props.searchUser(getUserName(props));
   }
 
+  componentWillReceiveProps(nextProps) {
+    const userName = getUserName(this.props);
+    const nextUserName = getUserName(nextProps);
+
+    if (userName !== nextUserName) {
+      this.props.getProfile(nextUserName);
+    }
+  }
+
   render() {
     const {
       isPending,
