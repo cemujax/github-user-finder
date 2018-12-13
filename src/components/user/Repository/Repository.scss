@@ -1,11 +1,12 @@
 @import "utils";
 
 .repositoreis {
-  margin: 0 auto;
-  width: 1400px;
-  padding-top: 10px;
-  padding-left: 10%;
+  width: 50%;
+  padding-right: 20px;
 
+  @include media("<medium") {
+    width: 100%;
+  }
   .repos-list {
     list-style: none;
     margin: 0;
@@ -15,6 +16,7 @@
       border-bottom: 1px solid #ddd;
       margin-bottom: 20px;
       padding-bottom: 10px;
+
       .repos-title {
         font-size: 20px;
 

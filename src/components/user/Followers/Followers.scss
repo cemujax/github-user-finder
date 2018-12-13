@@ -1,6 +1,11 @@
 @import "utils";
 
 .followers {
+  width: 50%;
+
+  @include media("<medium") {
+    width: 100%;
+  }
   .followers-list {
     list-style: none;
     margin: 0;
@@ -14,6 +19,7 @@
       .avatar {
         display: inline;
       }
+
       .user-name {
         display: inline;
         font-size: 1.2rem;

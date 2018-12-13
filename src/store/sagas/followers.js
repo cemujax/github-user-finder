@@ -10,7 +10,7 @@ export function* searchFollower(action) {
   try {
     const response = yield call(api.get, url, {
       params: {
-        per_page: 8
+        per_page: 10
       }
     });
     const followers = response.data;

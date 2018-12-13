@@ -2,10 +2,27 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import get from "lodash/fp/get";
+import styled from "styled-components";
+
 import UserProfile from "components/user/UserProfile";
 import Repository from "components/user/Repository";
+import Followers from "components/user/Followers";
 
 const getUserName = get("match.params.userName");
+
+const DetailContent = styled.div`
+  margin: 0px auto;
+  width: 72%;
+  padding-top: 10px;
+  display: flex;
+
+  @media (max-width: 1400px) {
+    width: 80%;
+  }
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
 
 class UserDetailContainer extends Component {
   static defaultProps = {
@@ -23,7 +40,14 @@ class UserDetailContainer extends Component {
   }
 
   render() {
-    const { isPending, userProfile, reposIsPending, repositories } = this.props;
+    const {
+      isPending,
+      userProfile,
+      reposIsPending,
+      repositories,
+      followersIsPending,
+      followers
+    } = this.props;
 
     if (isPending) {
       return <h2>Loading</h2>;
@@ -33,7 +57,10 @@ class UserDetailContainer extends Component {
       <React.Fragment>
         <UserProfile userProfile={userProfile} />
 
-        <Repository isPending={reposIsPending} repositories={repositories} />
+        <DetailContent>
+          <Repository isPending={reposIsPending} repositories={repositories} />
+          <Followers isPending={followersIsPending} followers={followers} />
+        </DetailContent>
       </React.Fragment>
     );
   }
@@ -42,12 +69,15 @@ class UserDetailContainer extends Component {
 function mapStateToProps(state) {
   const { isPending, userProfile } = state.user;
   const { repositories } = state.repos;
+  const { followers } = state.followers;
 
   return {
     isPending: isPending,
     userProfile: userProfile,
     reposIsPending: state.repos.isPending,
-    repositories: repositories
+    repositories: repositories,
+    followersIsPending: state.followers.isPending,
+    followers: followers
   };
 }
 
