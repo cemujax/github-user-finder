@@ -72,8 +72,11 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
+  "homepage": "http://cemujax.github.io/github-user-finder",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -130,6 +133,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "react-svg-loader": "^2.1.0"
   }
 }
