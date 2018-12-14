@@ -1,5 +1,4 @@
-import { takeLatest } from "redux-saga";
-import { call, put } from "redux-saga/effects";
+import { call, put, takeEvery } from "redux-saga/effects";
 import api from "store/api";
 
 export function* searchFollower(action) {
@@ -28,5 +27,5 @@ export function* searchFollower(action) {
 }
 
 export function* watchSearchFollowers() {
-  yield takeLatest("FOLLOWERS_REQUEST", searchFollower);
+  yield takeEvery("FOLLOWERS_REQUEST", searchFollower);
 }

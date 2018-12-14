@@ -1,5 +1,4 @@
-import { takeLatest } from "redux-saga";
-import { call, put } from "redux-saga/effects";
+import { call, put, takeEvery } from "redux-saga/effects";
 import api from "store/api";
 
 function* searchAdditionalDatao(data) {
@@ -43,5 +42,5 @@ export function* searchUser(action) {
 }
 
 export function* watchSearchUser() {
-  yield takeLatest("USER_REQUEST", searchUser);
+  yield takeEvery("USER_REQUEST", searchUser);
 }

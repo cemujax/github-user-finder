@@ -1,5 +1,4 @@
-import { takeLatest } from "redux-saga";
-import { call, put } from "redux-saga/effects";
+import { call, put, takeEvery } from "redux-saga/effects";
 import api from "store/api";
 
 export function* searchRepos(action) {
@@ -29,5 +28,5 @@ export function* searchRepos(action) {
 }
 
 export function* watchSearchRepos() {
-  yield takeLatest("REPOS_REQUEST", searchRepos);
+  yield takeEvery("REPOS_REQUEST", searchRepos);
 }
