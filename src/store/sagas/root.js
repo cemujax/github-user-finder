@@ -3,11 +3,13 @@ import { watchSearchUser } from "./user";
 import { watchSearchRepos } from "./repos";
 import { watchSearchFollowers } from "./followers";
 
+import { all } from "redux-saga/effects";
+
 export default function* rootSaga() {
-  yield [
+  yield all([
     watchSearchUsers(),
     watchSearchUser(),
     watchSearchRepos(),
     watchSearchFollowers()
-  ];
+  ]);
 }
