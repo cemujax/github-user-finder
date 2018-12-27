@@ -7,6 +7,7 @@ import styled from "styled-components";
 import UserProfile from "components/user/UserProfile";
 import Repository from "components/user/Repository";
 import Followers from "components/user/Followers";
+import Chart from "components/common/Chart";
 
 const getUserName = get("match.params.userName");
 
@@ -67,6 +68,7 @@ class UserDetailContainer extends Component {
         <UserProfile userProfile={userProfile} />
 
         <DetailContent>
+          <Chart repositories={repositories} />
           <Repository isPending={reposIsPending} repositories={repositories} />
           <Followers isPending={followersIsPending} followers={followers} />
         </DetailContent>
