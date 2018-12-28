@@ -10,20 +10,28 @@ class Chart extends Component {
   getLanguageStats = repos => {
     let stats = new Map();
 
-    for (let i = 0; i < repos.length; i++) {
-      const lang = repos[i].language;
-      if (lang !== null) {
-        stats.has(lang)
-          ? stats.set(lang, stats.get(lang) + 1)
-          : stats.set(lang, 1);
-      }
-    }
+    repos.forEach(repos => {
+      const lang = repos.language || "None";
+      stats.has(lang)
+        ? stats.set(lang, stats.get(lang) + 1)
+        : stats.set(lang, 1);
+    });
 
     return {
       labels: [...stats.keys()],
       datasets: [
         {
-          data: [...stats.values()]
+          data: [...stats.values()],
+          backgroundColor: [
+            "#FF6384",
+            "#36A2EB",
+            "#FFCE56",
+            "#f38b4a",
+            "#56d798",
+            "#A901DB",
+            "#CCEEFF"
+          ],
+          hoverBorderColor: "#000"
         }
       ]
     };
@@ -32,16 +40,21 @@ class Chart extends Component {
   render() {
     const { repositories } = this.props;
     const { getLanguageStats } = this;
-
     return (
       <div className={cx("chart")}>
         <h2>Language</h2>
-
-        <Doughnut
-          data={getLanguageStats(repositories)}
-          width={150}
-          height={150}
-        />
+        {repositories.length > 0 ? (
+          <Doughnut
+            data={getLanguageStats(repositories)}
+            width={300}
+            height={200}
+            options={{
+              responsive: false
+            }}
+          />
+        ) : (
+          <p>No Items</p>
+        )}
       </div>
     );
   }
