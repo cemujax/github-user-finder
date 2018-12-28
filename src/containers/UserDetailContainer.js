@@ -20,7 +20,7 @@ const DetailContent = styled.div`
   @media (max-width: 1400px) {
     width: 80%;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     display: block;
   }
 `;

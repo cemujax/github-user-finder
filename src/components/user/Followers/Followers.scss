@@ -3,7 +3,7 @@
 .followers {
   width: 50%;
 
-  @include media("<medium") {
+  @include media("<wide") {
     width: 100%;
   }
   .followers-list {
