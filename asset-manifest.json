@@ -1,9 +1,9 @@
 {
-  "main.css": "/github-user-finder/static/css/main.47612f21.chunk.css",
-  "main.js": "/github-user-finder/static/js/main.8516eed5.chunk.js",
-  "main.js.map": "/github-user-finder/static/js/main.8516eed5.chunk.js.map",
-  "static/js/1.32bf3437.chunk.js": "/github-user-finder/static/js/1.32bf3437.chunk.js",
-  "static/js/1.32bf3437.chunk.js.map": "/github-user-finder/static/js/1.32bf3437.chunk.js.map",
+  "main.css": "/github-user-finder/static/css/main.b7565a72.chunk.css",
+  "main.js": "/github-user-finder/static/js/main.3ce96f8b.chunk.js",
+  "main.js.map": "/github-user-finder/static/js/main.3ce96f8b.chunk.js.map",
+  "static/js/1.abdc4d60.chunk.js": "/github-user-finder/static/js/1.abdc4d60.chunk.js",
+  "static/js/1.abdc4d60.chunk.js.map": "/github-user-finder/static/js/1.abdc4d60.chunk.js.map",
   "runtime~main.js": "/github-user-finder/static/js/runtime~main.598d979a.js",
   "runtime~main.js.map": "/github-user-finder/static/js/runtime~main.598d979a.js.map",
   "static/media/icons8-search.d6f29974.svg": "/github-user-finder/static/media/icons8-search.d6f29974.svg",
@@ -13,8 +13,8 @@
   "static/media/Star.adb2a605.svg": "/github-user-finder/static/media/Star.adb2a605.svg",
   "static/media/Fork.007dbb9d.svg": "/github-user-finder/static/media/Fork.007dbb9d.svg",
   "static/media/github-icon.a933ec5e.svg": "/github-user-finder/static/media/github-icon.a933ec5e.svg",
-  "static/css/main.47612f21.chunk.css.map": "/github-user-finder/static/css/main.47612f21.chunk.css.map",
+  "static/css/main.b7565a72.chunk.css.map": "/github-user-finder/static/css/main.b7565a72.chunk.css.map",
   "index.html": "/github-user-finder/index.html",
-  "precache-manifest.880b5ad85c2f479fcc8db21b54345f0a.js": "/github-user-finder/precache-manifest.880b5ad85c2f479fcc8db21b54345f0a.js",
+  "precache-manifest.2b329b6dd680f400da13165827696a4d.js": "/github-user-finder/precache-manifest.2b329b6dd680f400da13165827696a4d.js",
   "service-worker.js": "/github-user-finder/service-worker.js"
 }
