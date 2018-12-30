@@ -12,6 +12,7 @@ https://cemujax.github.io/github-user-finder
 - Redux
 - Redux-Saga
 - React-Router
+- Chart.js
 - Sass
 - lodash-fp
 - create-react-app
